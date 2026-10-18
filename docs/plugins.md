@@ -30,7 +30,7 @@ zip 根目录可以直接是这些文件，也可以只有一个顶层目录（�
 | `manifestVersion` | | 用 `prompts` 时写 `2` |
 | `contributes.skills` | | 技能目录：`"skills"`，或 `{ "dir": "skills" }`。其下每个 `<name>/SKILL.md` 是一个技能，YAML 前言要有合规的 `name` 与 `description` |
 | `contributes.mcpServers[]` | | `{ "name", "command", "args"?, "env"?, "cwd"? }`。`command: "node"` 使用 iLife 自带的 Node（推荐，三个平台一致）；其它命令不经 shell 启动，Windows 上须是真正的可执行文件（`npx`、`*.cmd` 这类垫片无法启动）；参数里的 `${moduleDir}` 替换为插件安装目录。工具以 `mcp__<name>__<tool>` 出现 |
-| `contributes.prompts[]` | | `{ "id", "file" 或 "text", "into": "@default", "position": "prefix" 或 "suffix" }`，拼进智能体的系统提示词（`into` 是注入目标，桌面端只有默认助手 `@default`） |
+| `contributes.prompts[]` | | `{ "id", "file" 或 "text", "into"?, "position"? }`，拼进智能体的系统提示词。`into` 是注入目标数组，桌面端只有默认助手，写 `["@default"]` 或省略；`position` 为 `"prefix"` 或 `"suffix"` |
 
 示例：一个技能 + 一个 MCP 服务 + 一段提示词。
 
@@ -50,7 +50,7 @@ zip 根目录可以直接是这些文件，也可以只有一个顶层目录（�
       { "name": "acme", "command": "node", "args": ["${moduleDir}/mcp/server.mjs"] }
     ],
     "prompts": [
-      { "id": "style", "file": "prompts/style.md", "into": "@default", "position": "suffix" }
+      { "id": "style", "file": "prompts/style.md", "into": ["@default"], "position": "suffix" }
     ]
   }
 }

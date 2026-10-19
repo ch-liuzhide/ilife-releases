@@ -4,6 +4,8 @@
 
 打开 iLife 后先配置模型，测试连接通过才能进入对话。
 
+![配置模型](../assets/screenshots/onboarding.png)
+
 - 支持任意 **OpenAI 兼容**（`/chat/completions`，流式 + 工具调用）的模型服务：填 API 地址（如 `https://api.example.com/v1`，末尾多写的 `/chat/completions` 会自动去掉）、
   模型 id，API Key 可选（本机或内网不需要鉴权的服务可以不填），可选自定义请求头；可配置多个服务和模型，选一个作为默认。
 - **模型服务必须能从这台电脑直接访问**：模型请求由本机直接发出，不经过 iLife 的服务器。只在公司内网 / 办公网可用的地址，
@@ -26,6 +28,8 @@
 ## 3. 侧边栏
 
 对话标题栏右边的按钮打开 / 收起右侧侧边栏（可拖动调宽），快捷键 ⌘⇧E / ⌘J / ⌘⇧B（Windows 为 Ctrl）：
+
+![对话与侧边栏的文件面板](../assets/screenshots/chat.png)
 
 - **文件**：工作目录的文件树（目录变化自动刷新）+ 文件预览（代码高亮与行号、Markdown、图片、音视频、PDF、Word、Excel）。对话里提到的文件（如 `src/app.ts:12`）点一下就在这里打开并定位到行。
 - **终端**：在工作目录里打开真实终端（macOS 为登录 shell，Windows 为 PowerShell），可以开多个、重命名。这是你自己的终端，不受智能体权限档位限制。

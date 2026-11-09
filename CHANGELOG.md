@@ -3,6 +3,13 @@
 安装包在 [Releases](https://github.com/ch-liuzhide/ilife-releases/releases) 下载，每个版本的 tag 是 `v` + 版本号。
 iLife 没有自动更新：下载新版本覆盖安装即可，数据目录（配置、会话、插件）保留；升级步骤见[安装说明](docs/install.md#升级)。
 
+## 0.4.2 (2026-11-09)
+
+- 浏览器标签页独立成行，支持切换、关闭、新建、键盘导航和横向滚动；空白页根据访问时间和次数推荐历史网页。
+- 创作工坊接入原生 ComfyUI，提供按需启动、三步入门、模型目录、日志与失败重试；补齐模板和内置帮助。
+- ComfyUI 随包运行时覆盖 Windows x64、Apple Silicon 和 Intel Mac。Apple Silicon 使用 MPS，Windows 和 Intel 使用 CPU；Intel 采用兼容的 ComfyUI v0.3.26 / PyTorch 2.2.2，另两平台使用 ComfyUI v0.43.0。工作流与自定义节点请按对应版本选择。
+- 改进数字员工能力配置、系统提示词与 Windows 内置 Bash 支持。
+
 ## 0.4.0 (2026-10-20)
 
 本地模型：不用 API Key、数据不出电脑，按这台电脑的硬件一键下载并启用；首次使用改为四步引导；对话里可以打断、编辑重发与重新回答。
